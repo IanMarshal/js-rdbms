@@ -1,18 +1,182 @@
-# React + Vite
+RDBMS Application — Full-Stack Portfolio Project
+🔍 Overview
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+This project is a full-stack Relational Database Management System (RDBMS) application built to demonstrate practical skills in modern web development, API design, and database-driven systems.
 
-Currently, two official plugins are available:
+The application uses a React (Vite) frontend and a Node.js + Express backend, following a clean client–server architecture. It is designed as a foundation for building real-world, data-driven applications.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+🎯 Purpose (Why this project exists)
 
-## React Compiler
+This project was built to demonstrate:
 
-The React Compiler is enabled on this template. See [this documentation](https://react.dev/learn/react-compiler) for more information.
+Frontend ↔ backend integration
 
-Note: This will impact Vite dev & build performances.
+RESTful API communication
 
-## Expanding the ESLint configuration
+Clean project structure
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+Real-world RDBMS concepts
+
+Production-oriented development practices
+
+It is intentionally structured to scale into a complete CRUD system backed by a relational database.
+
+🧱 Tech Stack
+Frontend
+
+React
+
+Vite
+
+JavaScript (ES6 / JSX)
+
+HTML & CSS
+
+Backend
+
+Node.js
+
+Express.js
+
+CORS
+
+Database (planned)
+
+MySQL or PostgreSQL
+
+🏗️ Architecture
+React (Vite)
+   ↓ HTTP (fetch)
+Node.js + Express (REST API)
+   ↓ SQL
+Relational Database
+
+
+React does not connect directly to the database.
+All database interactions are handled through the backend API.
+
+📁 Project Structure
+rdbms/
+├── backend/
+│   ├── index.js          # Express server
+│   ├── package.json
+│   └── node_modules/
+│
+├── src/
+│   ├── App.jsx           # Main React component
+│   ├── main.jsx          # App entry point
+│   ├── App.css
+│   └── assets/
+│
+├── index.html
+├── package.json          # Frontend config
+├── vite.config.js
+└── README.md
+
+▶️ Running the Project Locally
+Prerequisites
+
+Node.js (v18+ recommended)
+
+npm
+
+Check:
+
+node -v
+npm -v
+
+Start the Frontend
+npm install
+npm run dev
+
+
+Frontend runs at:
+
+http://localhost:5173/
+
+Start the Backend
+
+In a separate terminal:
+
+cd backend
+npm install
+node index.js
+
+
+Backend runs at:
+
+http://localhost:5000
+
+
+Test endpoint:
+
+http://localhost:5000/api/health
+
+
+Expected response:
+
+{ "status": "Backend running" }
+
+🔗 Frontend ↔ Backend Integration
+
+The frontend fetches data from the backend using fetch:
+
+fetch("http://localhost:5000/api/health")
+
+
+If the UI displays “Backend running”, the integration is successful.
+
+🚧 Planned Enhancements
+
+Database connection (MySQL / PostgreSQL)
+
+CRUD operations
+
+Data models and schema design
+
+Form handling and validation
+
+Authentication (JWT)
+
+Deployment (frontend + backend)
+
+🧠 Key Skills Demonstrated
+
+React fundamentals & hooks
+
+Vite development workflow
+
+Node.js & Express API design
+
+Client–server architecture
+
+Debugging & environment setup
+
+Scalable project organization
+
+💼 Portfolio Notes for Reviewers
+
+This project prioritizes correct architecture over shortcuts
+
+Each layer (UI, API, DB) is clearly separated
+
+The project is designed to scale into a production system
+
+Clean setup and debugging decisions reflect real-world workflows
+
+📌 Status
+
+🚧 Actively developed and expanded
+📈 Built as a learning and portfolio demonstration project
+
+If you want next, I can:
+
+Rewrite this README to match a specific job role
+
+Add a “What I Learned” section (very strong for portfolios)
+
+Help you deploy it and add the live link
+
+Help you explain this project confidently in an interview
+
+Just tell me what you want to optimize for.
